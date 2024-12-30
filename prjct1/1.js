@@ -8,5 +8,11 @@ document.querySelector('#push').onclick = function(){
             <span id ="takename"> ${document.querySelector('#newatask input').value}</span>
             <button class="delete"><i class="fa-solid fa-delete-left"></i></button>
         </div>`;
+        var current_task = document.querySelectorAll(".delete");
+        for(var i = 0;i < current_task.length;i++){
+            current_task[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
     }
 }
